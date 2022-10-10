@@ -4,6 +4,8 @@ import org.gradle.api.GradleException
 import org.gradle.api.Plugin
 import org.gradle.api.Project
 import java.io.File
+//import com.android.build.api.variant.AndroidComponentsExtension
+import com.android.build.gradle.AppExtension
 
 internal class MyFirstPlugin : Plugin<Project> {
 
@@ -13,6 +15,14 @@ internal class MyFirstPlugin : Plugin<Project> {
     }
 
     override fun apply(project: Project) {
+
+        println("#thelou1s, apply")
+
+        project.pluginManager.withPlugin("com.android.application") {
+            val androidExtension = project.extensions.getByType(AppExtension::class.java)
+            //val androidComponentsExtension = project.extensions.getByType(AndroidComponentsExtension::class.java)
+        }
+
         project.android().variants().all { variant ->
 
             val colorTaskName = "generateColors${variant.name.capitalize()}"
