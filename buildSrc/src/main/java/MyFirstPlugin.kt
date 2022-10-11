@@ -15,15 +15,16 @@ internal class MyFirstPlugin : Plugin<Project> {
     }
 
     override fun apply(project: Project) {
-
         println("#thelou1s, apply")
 
         project.pluginManager.withPlugin("com.android.application") {
+            println("#thelou1s, withPlugin, it:$it")
             val androidExtension = project.extensions.getByType(AppExtension::class.java)
             //val androidComponentsExtension = project.extensions.getByType(AndroidComponentsExtension::class.java)
         }
 
         project.android().variants().all { variant ->
+            println("#thelou1s, variants:$variant")
 
             val colorTaskName = "generateColors${variant.name.capitalize()}"
             val outputPath = "${project.buildDir}/generated/res"
