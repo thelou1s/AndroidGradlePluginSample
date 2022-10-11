@@ -21,6 +21,8 @@ internal class MyFirstPlugin : Plugin<Project> {
             println("#thelou1s, withPlugin, it:$it")
             val androidExtension = project.extensions.getByType(AppExtension::class.java)
             //val androidComponentsExtension = project.extensions.getByType(AndroidComponentsExtension::class.java)
+
+            androidExtension.registerTransform(MethodTimeTransform())
         }
 
         project.android().variants().all { variant ->
