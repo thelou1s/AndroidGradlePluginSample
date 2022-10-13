@@ -2,7 +2,6 @@ import com.android.build.api.transform.*
 import com.android.build.gradle.internal.pipeline.TransformManager
 import com.android.utils.FileUtils
 
-// https://juejin.cn/post/6864349303843307534
 class MethodTimeTransform : Transform() {
     override fun getName(): String {
         return "MethodTimeTransform"
