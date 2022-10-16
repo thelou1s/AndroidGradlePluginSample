@@ -25,9 +25,10 @@ fun BaseExtension.variants(): DomainObjectSet<out BaseVariant> {
             applicationVariants
         }
 
-        is FeatureExtension -> {
-            featureVariants
-        }
+        // Unresolved reference: featureVariants
+//        is FeatureExtension -> {
+//            featureVariants
+//        }
 
         is LibraryExtension -> {
             libraryVariants

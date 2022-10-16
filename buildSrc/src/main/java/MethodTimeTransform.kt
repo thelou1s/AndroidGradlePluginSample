@@ -1,6 +1,6 @@
 import com.android.build.api.transform.*
 import com.android.build.gradle.internal.pipeline.TransformManager
-import com.android.utils.FileUtils
+//import com.android.utils.FileUtils
 
 class MethodTimeTransform : Transform() {
     override fun getName(): String {
@@ -51,7 +51,7 @@ class MethodTimeTransform : Transform() {
         )
         //将修改过的字节码copy到dest,就可以实现编译期间干预字节码的目的
         println("#thelou1s, processJarInput, 拷贝文件 $dest -----")
-        FileUtils.copyFile(jarInput.file, dest)
+//        FileUtils.copyFile(jarInput.file, dest)
     }
 
     private fun processDirectoryInput(
@@ -66,6 +66,6 @@ class MethodTimeTransform : Transform() {
         )
         //将修改过的字节码copy到dest,就可以实现编译期间干预字节码的目的
         println("#thelou1s, processDirectoryInput, 拷贝文件夹 $dest -----")
-        FileUtils.copyDirectory(directoryInput.file, dest)
+//        FileUtils.copyDirectory(directoryInput.file, dest)
     }
 }

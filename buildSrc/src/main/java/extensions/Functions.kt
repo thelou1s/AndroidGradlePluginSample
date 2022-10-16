@@ -1,4 +1,4 @@
-import android.databinding.tool.util.StringUtils
+//import android.databinding.tool.util.StringUtils
 import java.util.*
 import java.util.regex.Pattern
 
@@ -42,7 +42,7 @@ fun getAllPossibleFileLocationsByVariantDirectory(variantDirname: String): List<
             fileLocations.add("src/$flavorName/$buildType")
             fileLocations.add("src/$buildType/$flavorName")
             fileLocations.add("src/$flavorName")
-            fileLocations.add("src/" + flavorName + StringUtils.capitalize(buildType))
+//            fileLocations.add("src/" + flavorName + StringUtils.capitalize(buildType))
         }
 
         fileLocations.add("src/$buildType")
@@ -52,7 +52,7 @@ fun getAllPossibleFileLocationsByVariantDirectory(variantDirname: String): List<
             fileLocation += "/$flavor"
             fileLocations.add(fileLocation)
             fileLocations.add("$fileLocation/$buildType")
-            fileLocations.add(fileLocation + StringUtils.capitalize(buildType))
+//            fileLocations.add(fileLocation + StringUtils.capitalize(buildType))
         }
 
         fileLocations.add("src/main")
