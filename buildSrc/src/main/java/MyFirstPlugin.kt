@@ -6,8 +6,11 @@ import org.gradle.api.Project
 import java.io.File
 //import com.android.build.api.variant.AndroidComponentsExtension
 import com.android.build.gradle.AppExtension
+//import groovyjarjarasm.asm.ClassReader
 
 internal class MyFirstPlugin : Plugin<Project> {
+
+//    lateinit var reader: ClassReader
 
     companion object {
         // All clients of this plugin will need to use this specific file name
@@ -16,6 +19,9 @@ internal class MyFirstPlugin : Plugin<Project> {
 
     override fun apply(project: Project) {
         println("#thelou1s, apply")
+
+//        val ccw = CustomClassWriter()
+//        ccw.addField()
 
         project.pluginManager.withPlugin("com.android.application") {
             println("#thelou1s, withPlugin, it:$it")

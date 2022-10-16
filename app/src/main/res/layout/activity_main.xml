@@ -6,27 +6,39 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <View
+    <TextView
         android:id="@+id/color_1_view"
         android:layout_width="match_parent"
         android:layout_height="100dp"
         android:background="@color/color1"
+        android:gravity="center"
+        android:text="Hello"
+        android:textColor="@android:color/white"
         app:layout_constraintBottom_toTopOf="@id/color_2_view"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="HardcodedText" />
 
-    <View
+    <TextView
         android:id="@+id/color_2_view"
         android:layout_width="match_parent"
         android:layout_height="100dp"
         android:background="@color/color2"
+        android:gravity="center"
+        android:text="World"
+        android:textColor="@android:color/white"
         app:layout_constraintBottom_toTopOf="@id/color_3_view"
-        app:layout_constraintTop_toBottomOf="@id/color_1_view" />
+        app:layout_constraintTop_toBottomOf="@id/color_1_view"
+        tools:ignore="HardcodedText" />
 
-    <View
+    <TextView
         android:id="@+id/color_3_view"
         android:layout_width="match_parent"
         android:layout_height="100dp"
         android:background="@color/color3"
+        android:gravity="center"
+        android:text=": )"
+        android:textColor="@android:color/white"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/color_2_view" />
+        app:layout_constraintTop_toBottomOf="@id/color_2_view"
+        tools:ignore="HardcodedText" />
 </androidx.constraintlayout.widget.ConstraintLayout>
